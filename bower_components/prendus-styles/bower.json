@@ -1,0 +1,11 @@
+{
+  "name": "prendus-styles",
+  "main": "prendus-styles.html",
+  "dependencies": {
+		"iron-demo-helpers": "PolymerElements/iron-demo-helpers#^1.0.0",
+    "polymer": "Polymer/polymer#^1.4.0"
+  },
+  "devDependencies": {
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0"
+  }
+}

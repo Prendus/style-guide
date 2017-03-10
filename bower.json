@@ -1,0 +1,13 @@
+{
+  "name": "style-guide",
+	"authors": [
+		"Brandon Blatter (https://intcreator.com)"
+	],
+	"ignore": [
+		"**/.*",
+		"bower_components"
+	],
+  "dependencies": {
+		"prendus-styles": "intcreator/prendus-styles"
+  }
+}

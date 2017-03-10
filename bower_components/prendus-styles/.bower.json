@@ -1,0 +1,21 @@
+{
+  "name": "prendus-styles",
+  "main": "prendus-styles.html",
+  "dependencies": {
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^1.0.0",
+    "polymer": "Polymer/polymer#^1.4.0"
+  },
+  "devDependencies": {
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0"
+  },
+  "homepage": "https://github.com/intcreator/prendus-styles",
+  "_release": "8d4ed41510",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "8d4ed415101b96d454b1092742b6812f567bef65"
+  },
+  "_source": "https://github.com/intcreator/prendus-styles.git",
+  "_target": "*",
+  "_originalSource": "intcreator/prendus-styles"
+}
