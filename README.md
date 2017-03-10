@@ -10,9 +10,33 @@ If styling for a certain element or feature is not mentioned here, follow [Googl
 
 If you wish to contribute to the style guide, make a pull request and/or contact the styling lead (currently @intcreator).
 
-## Global CSS Sheet
+## Including global styles
 
-Currently the global CSS sheet containing color variables and default styles for Prendus elements is available in prendus-services/styles/prendus-styles.html.
+The Prendus CSS files are found in [intcreator/prendus-styles](https://github.com/intcreator/prendus-styles).  Include the component by running the following command in the same directory as bower.json:
+
+```
+$ bower install --save intcreator/prendus-styles
+```
+
+Import the component as needed with HTML imports.  If you're including styles on a static HTML page, you will have a `style` declaration that looks similar to this:
+
+```html
+<style is="custom-style" include="prendus-styles">
+
+	/* styles */
+
+</style>
+```
+
+If you're including styles in a Polymer element, you will have a `style` declaration that looks similar to this:
+
+```html
+<style include="prendus-styles">
+
+	/* styles */
+
+</style>
+```
 
 ## Layout
 
