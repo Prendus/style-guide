@@ -1,4 +1,4 @@
-# Design Style Guide
+# Prendus Style Guide
 
 ### [Styling examples](https://prendus.github.io/style-guide/)
 
