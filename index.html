@@ -17,7 +17,7 @@
 			body {
 				max-width: 800px;
 				margin: auto;
-				padding: 30px;
+				padding: 7vw;
 			}
 
 			body > * + * {
@@ -29,6 +29,18 @@
 					display: none;
 				}
 			}
+
+			demo-snippet {
+				--demo-snippet-code: {
+					font-size: 1.1em;
+					font-family: 'Inconsolata', 'Monaco', 'Consolas', 'Courier New', Courier;
+				}
+			}
+
+			footer {
+				text-align: center;
+			}
+
 		</style>
 
   </head>
@@ -54,7 +66,7 @@
 			</template>
 		</demo-snippet>
 
-		<h3>Horizontal Container</h3>
+		<h4>Horizontal Container</h4>
 		<p>Default spacing for a horizontal container.</p>
 		<demo-snippet>
 			<template>
@@ -62,6 +74,16 @@
 					<button class="prendus-button">Button</button>
 					<span>Span</span>
 					<a href="#">Link</a>
+				</div>
+			</template>
+		</demo-snippet>
+
+		<h3>Cards</h3>
+		<p>Instead of using <code>&lt;paper-card&gt;</code>, you should usually use the Prendus card style.</p>
+		<demo-snippet class="no-demo">
+			<template>
+				<div class="prendus-card">
+					<!-- CONTENT -->
 				</div>
 			</template>
 		</demo-snippet>
@@ -132,7 +154,7 @@
 
 		<h3>Icon buttons</h3>
 
-		<p>Additional feedback for icon buttons</p>
+		<p>Additional feedback for icon buttons.</p>
 		<demo-snippet>
 			<template>
 				<paper-icon-button class="prendus-icon-button" icon="info-outline"></paper-icon-button>
@@ -161,6 +183,8 @@
 				<link rel="import" href="bower_components/prendus-styles/components/prendus-drop-down.html">
 			</template>
 		</demo-snippet>
+
+		<footer>Copyright © <script>document.write(new Date().getFullYear());</script> Prendus</footer>
 
   </body>
 </html>

@@ -54,6 +54,25 @@ Prendus has the following breakpoints:
 
 Try to use as few explicit breakpoints as possible.  Instead of using media queries (`@media`), use `max-width` or other more automatic layout CSS.
 
+### Containers
+
+You can use default Prendus container classes to standardize the spacing between elements in containers and to cut down on element-specific CSS:
+
+| Container type | Class |
+| :------------- | :------------- |
+| Horizontal | `prendus-horizontal-container` |
+| Vertical | `prendus-vertical-container` |
+
+Don't force the use of these container classes; rather use them to quickly add spacing to your elements.
+
+### Cards
+
+Cards can be used to make an element stand out from the background.  Prendus usually uses cards to feature the main content on a page (such as a course, quiz, question, etc.).
+
+Polymer has a `<paper-card>` element, but use `<div class="prendus-card">` whenever possible.  The `<div>` is more lightweight and uses the same Material Design style to produce the depth effect.
+
+Do not nest cards inside each other.  Limit the number of cards used on each page.
+
 ## Colors
 
 Some colors are given variable names such as `--prendus-primary-color`.  Refer to these colors as `var(--prendus-primary-color)` as in the following example:
@@ -106,3 +125,31 @@ If you are using a specific type of button (like a recommended action button) yo
 ```html
 <button class="prendus-button prendus-button--recommended">Sign up</button>
 ```
+
+## Drop-downs
+
+Drop-downs are used for menus and selecting items from a list.  Use a standard Prendus drop-down instead of `<paper-listbox>` or `<select>`.
+
+### Generic drop-down
+
+Basic drop-down syntax looks like this:
+
+```html
+<prendus-drop-down button-text="Menu" button-title="Profile and settings">
+  <a href="#">Profile</a>
+  <a href="#">Settings</a>
+  <button on-tap="logOut">Log out</button>
+</prendus-drop-down>
+```
+
+The generic drop-down has the following properties:
+
+| Property | Description |
+| :------------- | :------------- |
+| button-text | The text displayed on the button that will be clicked to show the drop-down |
+| button-type | The type of button to be shown (extends the `prendus-button--...` classes; pick `recommended`, `destructive`, etc.) |
+| button-title | The text displayed when the user hovers the cursor over the button |
+| button-icon | The icon displayed next to the button text (using the same text as the `icon` attribute in `<iron-icon>`) |
+| horizontal-align | The alignment of the menu to the right or left side of the button (the only options are `right` and `left`) |
+
+Note: the drop-down will still function without any of these properties, but you should add enough to make the drop-down purpose clear and easy to use.
