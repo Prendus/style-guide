@@ -143,6 +143,9 @@
 
 		<h3>Generic drop-down</h3>
 		<p>Used for menus and drop-down selections.</p>
+		<!-- TODO: currently adding Polymer elements with .ts files requires converting them
+		to .js files then adding `let exports = {};` so the browser will render it.  Look
+		into a better solution, particularly one that involves automatic transpilation. -->
 		<demo-snippet>
 			<template>
 				<prendus-drop-down button-text="Menu" button-title="Profile and settings">
