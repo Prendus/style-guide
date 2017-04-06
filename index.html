@@ -9,8 +9,9 @@
 		<link rel="icon" href="favicon.png">
 
 		<link rel="import" href="bower_components/prendus-styles/prendus-styles.html">
+		<link rel="import" href="bower_components/prendus-styles/components/prendus-drop-down.html">
 		<link rel="import" href="bower_components/iron-demo-helpers/demo-snippet.html">
-    <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
+		<script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
 
 		<style is="custom-style" include="prendus-styles">
 			body {
@@ -22,16 +23,54 @@
 			body > * + * {
 				margin-top: 20px;
 			}
+
+			.no-demo {
+				--demo-snippet-demo: {
+					display: none;
+				}
+			}
 		</style>
 
   </head>
   <body>
 
-		<h1>Prendus Styles</h1>
+		<h1>Prendus Styling Examples</h1>
+
+		<p>This page has several examples of elements you can use in your designs as long as you correctly import prendus-styles.  See the <a href="https://github.com/Prendus/style-guide">guidelines</a> for more information.</p>
+
+		<h2>Layout</h2>
+
+		<h3>Containers</h3>
+
+		<h4>Vertical Container</h4>
+		<p>Default spacing for a vertical container.</p>
+		<demo-snippet>
+			<template>
+				<div class="prendus-vertical-container">
+					<h4>Header</h4>
+					<button class="prendus-button">Button</button>
+					<p>Text</p>
+				</div>
+			</template>
+		</demo-snippet>
+
+		<h3>Horizontal Container</h3>
+		<p>Default spacing for a horizontal container.</p>
+		<demo-snippet>
+			<template>
+				<div class="prendus-horizontal-container">
+					<button class="prendus-button">Button</button>
+					<span>Span</span>
+					<a href="#">Link</a>
+				</div>
+			</template>
+		</demo-snippet>
 
 		<h2>Buttons</h2>
 
-    <h3>Default</h3>
+    <h3>General</h3>
+
+		<h4>Default</h4>
 		<p>The default button style.  Should be included everywhere a button is used.</p>
     <demo-snippet>
       <template>
@@ -39,7 +78,18 @@
       </template>
     </demo-snippet>
 
-		<h3>Recommended</h3>
+		<h4>With icons</h4>
+		<p>Buttons can have icons inside them as well as text.  The span element is required.</p>
+		<demo-snippet>
+			<template>
+				<button class="prendus-button">
+					<iron-icon icon="info-outline"></iron-icon>
+					<span>Default</span>
+				</button>
+			</template>
+		</demo-snippet>
+
+		<h4>Recommended</h4>
 		<p>Used to recommend an action to the user.</p>
 		<demo-snippet>
 			<template>
@@ -47,7 +97,7 @@
 			</template>
 		</demo-snippet>
 
-		<h3>Minor</h3>
+		<h4>Minor</h4>
 		<p>Used for closing dialogs or other small actions.</p>
 		<demo-snippet>
 			<template>
@@ -55,11 +105,57 @@
 			</template>
 		</demo-snippet>
 
-		<h3>Destructive</h3>
+		<h4>Destructive</h4>
 		<p>Used to warn users that the action triggered by the button cannot be undone.</p>
 		<demo-snippet>
 			<template>
 				<button class="prendus-button prendus-button--destructive">Destructive</button>
+			</template>
+		</demo-snippet>
+
+		<h4>Big</h4>
+		<p>Used sparingly in calls to action (such as on the home page).</p>
+		<demo-snippet>
+			<template>
+				<button class="prendus-button prendus-button--big">Big</button>
+			</template>
+		</demo-snippet>
+
+		<h3>Link buttons</h3>
+
+		<p>Button tags that need to look like anchor tags.  Use sparingly.</p>
+		<demo-snippet>
+			<template>
+				This is some text that has a <button class="prendus-link-button">button</button> in it.
+			</template>
+		</demo-snippet>
+
+		<h3>Icon buttons</h3>
+
+		<p>Additional feedback for icon buttons</p>
+		<demo-snippet>
+			<template>
+				<paper-icon-button class="prendus-icon-button" icon="info-outline"></paper-icon-button>
+			</template>
+		</demo-snippet>
+
+		<h2>Drop-downs</h2>
+
+		<h3>Generic drop-down</h3>
+		<p>Used for menus and drop-down selections.</p>
+		<demo-snippet>
+			<template>
+				<prendus-drop-down button-text="Menu" button-title="Profile and settings">
+					<a href="#">Profile</a>
+					<a href="#">Settings</a>
+					<button on-tap="logOut">Log out</button>
+				</prendus-drop-down>
+			</template>
+		</demo-snippet>
+		<p>You need to import the <code>&lt;prendus-drop-down&gt;</code> component in order to use it.</p>
+		<demo-snippet class="no-demo">
+			<template>
+				<link rel="import" href="bower_components/prendus-styles/components/prendus-drop-down.html">
 			</template>
 		</demo-snippet>
 

@@ -66,6 +66,7 @@ background-color: var(--prendus-primary-color);
 
 - **Prendus Primary Color (`--prendus-primary-color`)**: For logos, headers, and primary actions buttons.  Use to make clear the primary identity of Prendus.
 - **Prendus Primary Color Emphasis (`--prendus-primary-color-emphasis`)**: For accents and places where a color change on hover is needed (such as on buttons).
+- **Prendus Primary Color Light (`--prendus-primary-color-light`)**: For light backgrounds that could use a touch of color (such as tabs).
 - **Prendus Off White (`--prendus-off-white`)**: For backgrounds that should light, but not plain white (such as cards, menus, highlights, etc.).
 - **Prendus Grey (`--prendus-grey`)**: For outlines, dividers, and secondary buttons.
 - **Prendus Red (`--prendus-red`)**: For drawing attention, announcing critical errors, and warning about destructive actions.
@@ -76,6 +77,8 @@ Prendus buttons should be either `<a>` or `<button>` tags.  Get a second opinion
 
 Prendus buttons are stylized by adding the appropriate classes as follows:
 
+### Generic buttons
+
 | Button type | Description | Class to add |
 | :-- | :-- | :-- |
 | Default | The base button class | `prendus-button` |
@@ -84,7 +87,21 @@ Prendus buttons are stylized by adding the appropriate classes as follows:
 | Destructive | Used to warn users that the action triggered by the button cannot be undone | `prendus-button--destructive` |
 | Big | Used sparingly in calls to action (such as on the home page) | `prendus-button--big` |
 
-Note: if you are using non-generic button (like a recommended action button) you need to include the base class (`prendus-button`) in addition to the specific class.  For example:
+### Link buttons
+
+Link buttons are `<button>` elements that need to look like default `<a>` elements.  This is useful if you need to include button functionality inline in a body of text.  However, usually a generic button placed somewhere else will work better.
+
+To create a link button, add the `prendus-link-button` class.
+
+### Icon buttons
+
+Icon buttons are primarily `<paper-icon-button>` elements that need to respond when the user hovers over them.  Avoid using `<iron-icon>` for button functionality (however, you can use `<iron-icon>` inside of `<a>` tags).
+
+To create an icon button, add the `prendus-icon-button` class.
+
+### How to use
+
+If you are using a specific type of button (like a recommended action button) you need to include the base class (`prendus-button`) in addition to the specific class.  For example:
 
 ```html
 <button class="prendus-button prendus-button--recommended">Sign up</button>

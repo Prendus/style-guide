@@ -11,17 +11,23 @@
 
 				:root {
 					--prendus-primary-color: var(--paper-indigo-500);
-					--prendus-primary-color-emphasis: var(--paper-indigo-600);
+					--prendus-primary-color-emphasis: var(--paper-indigo-700);
+					--prendus-primary-color-light: var(--paper-indigo-50);
 					--prendus-off-white: #fafafa;
 					--prendus-grey: #f0f0f0;
 					--prendus-red: var(--paper-red-500);
 				}
 
-				/* GENERAL */
+				/* TEXT */
 
 				* {
 					font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 					word-wrap: break-word;
+				}
+
+				code {
+					font-family: 'Anonymous Pro', Courier;
+					background-color: var(--prendus-grey)
 				}
 
 				a {
@@ -34,17 +40,17 @@
 
 				h1 {
 				  font-weight: 300;
-				  font-size: calc(2.2em + 2vw);
+				  font-size: calc(1.8em + 2vw);
 				}
 
 				h2 {
 				  font-weight: 300;
-				  font-size: calc(1.4em + 1vw);
+				  font-size: calc(1.3em + 1vw);
 				}
 
 				h3 {
 				  font-weight: 200;
-				  font-size: calc(1em + 1vw);
+				  font-size: calc(.9em + 1vw);
 				  color: #777;
 				}
 
@@ -58,14 +64,52 @@
 					margin: 0;
 				}
 
-				/* TODO: replace :webkit-any and :-moz-any with the standardized selector once implemented */
+				/* TODO: replace this obnoxious thing with :matches or equivalent once implemented */
+				/* See http://caniuse.com/#search=%3Amatches */
 
-				:-webkit-any(p, h1, h2, h3, h4, h5, h6) + :-webkit-any(p, h1, h2, h3, h4, h5, h6) {
+				p + p,
+				p + h1,
+				p + h2,
+				p + h3,
+				p + h4,
+				h1 + p,
+				h1 + h1,
+				h1 + h2,
+				h1 + h3,
+				h1 + h4,
+				h2 + p,
+				h2 + h1,
+				h2 + h2,
+				h2 + h3,
+				h2 + h4,
+				h3 + p,
+				h3 + h1,
+				h3 + h2,
+				h3 + h3,
+				h3 + h4,
+				h4 + p,
+				h4 + h1,
+				h4 + h2,
+				h4 + h3,
+				h4 + h4 {
 					margin-top: .7em;
 				}
 
-				:-moz-any(p, h1, h2, h3, h4, h5, h6) + :-moz-any(p, h1, h2, h3, h4, h5, h6) {
-					margin-top: .7em;
+				/* CONTAINERS */
+
+				.prendus-vertical-container > * + * {
+					margin-top: 15px;
+				}
+
+				.prendus-horizontal-container > * + * {
+					margin-left: 5px;
+				}
+
+				.prendus-card {
+					border-radius: 2px;
+
+					/* material design shadows */
+					@apply(--shadow-elevation-2dp);
 				}
 
 				/* BUTTONS */
@@ -76,6 +120,7 @@
 					background-color: var(--paper-grey-200);
 					border-radius: 3px;
 					padding: .7em 1.4em;
+					box-sizing: border-box;
 					user-select: none;
 					display: inline-flex;
 					align-items: center;
@@ -84,18 +129,14 @@
 					cursor: pointer;
 				}
 
-				.prendus-button iron-icon {
-					height: 1.3em;
-					width: 1.3em;
-				}
-
-				.prendus-button iron-icon + * {
-					margin-left: 5px;
-				}
-
 				.prendus-button:hover {
 					text-decoration: none;
 					background-color: var(--paper-grey-300);
+				}
+
+				.prendus-button:focus {
+					font-weight: bold;
+					outline: none;
 				}
 
 				.prendus-button[disabled] {
@@ -106,6 +147,15 @@
 
 				.prendus-button[disabled]:hover {
 					background-color: var(--paper-grey-200);
+				}
+
+				.prendus-button iron-icon {
+					height: 1.3em;
+					width: 1.3em;
+				}
+
+				.prendus-button > * + * {
+					margin-left: 5px;
 				}
 
 				.prendus-button--recommended {
@@ -142,11 +192,28 @@
 					padding: .9em 1.8em;
 				}
 
+				/* Formats buttons in any div with the class "buttons" */
 				.buttons .prendus-button + .prendus-button {
 					margin-left: 5px;
 				}
 
+				/* For buttons that look like inline text links */
+				.prendus-link-button {
+					color: var(--prendus-primary-color);
+					background-color: inherit;
+					font-size: 1em;
+					padding: 0;
+					cursor: pointer;
+					border: none;
+					display: inline;
+				}
+
+				.prendus-link-button:hover {
+					text-decoration: underline;
+				}
+
 				.prendus-icon-button {
+					cursor: pointer;
 					color: rgba(0, 0, 0, .5);
 				}
 

@@ -1,0 +1,29 @@
+{
+  "name": "style-guide",
+  "version": "1.0.0",
+  "description": "A style guide and module demos for Prendus",
+  "main": "index.html",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/polymer": "^1.1.30"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Prendus/style-guide.git"
+  },
+  "keywords": [
+    "prendus",
+    "learning",
+    "quiz",
+    "question"
+  ],
+  "author": "Brandon",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/Prendus/style-guide/issues"
+  },
+  "homepage": "https://github.com/Prendus/style-guide#readme"
+}

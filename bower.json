@@ -8,6 +8,6 @@
 		"bower_components"
 	],
   "dependencies": {
-		"prendus-styles": "intcreator/prendus-styles"
+		"prendus-styles": "intcreator/prendus-styles#master"
   }
 }
