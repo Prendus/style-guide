@@ -151,5 +151,6 @@ The generic drop-down has the following properties:
 | button-title | The text displayed when the user hovers the cursor over the button |
 | button-icon | The icon displayed next to the button text (using the same text as the `icon` attribute in `<iron-icon>`) |
 | horizontal-align | The alignment of the menu to the right or left side of the button (the only options are `right` and `left`) |
+| responsive | Add if the menu should be responsive (show a menu icon instead of text on small screen sizes) |
 
 Note: the drop-down will still function without any of these properties, but you should add enough to make the drop-down purpose clear and easy to use.
