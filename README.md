@@ -73,6 +73,25 @@ Polymer has a `<paper-card>` element, but use `<div class="prendus-card">` whene
 
 Do not nest cards inside each other.  Limit the number of cards used on each page.
 
+### Dialogs
+
+Use the `<paper-dialog>` element.  Add content and buttons as follows:
+
+```html
+<paper-dialog>
+	<div class="content">
+		<h2>Reset Password</h2>
+		<p>We'll send you an email with a link to reset your password</p>
+	</div>
+  <div class="buttons">
+  	<button class="prendus-button" dialog-dismiss>Cancel</button>
+  	<button class="prendus-button prendus-button--recommended" on-tap="sendEmail">Send</button>
+  </div>
+</paper-dialog>
+```
+
+Note the `<div class="content">`.  This is necessary to avoid a formatting issue caused by `<paper-dialog>`.
+
 ## Colors
 
 Some colors are given variable names such as `--prendus-primary-color`.  Refer to these colors as `var(--prendus-primary-color)` as in the following example:
@@ -114,9 +133,12 @@ To create a link button, add the `prendus-link-button` class.
 
 ### Icon buttons
 
-Icon buttons are primarily `<paper-icon-button>` elements that need to respond when the user hovers over them.  Avoid using `<iron-icon>` for button functionality (however, you can use `<iron-icon>` inside of `<a>` tags).
+Icon buttons are primarily `<paper-icon-button>` elements that need to respond when the user hovers over them.  Avoid using `<iron-icon>` for button functionality (however, you should use `<iron-icon>` inside of `<a>` tags).
 
-To create an icon button, add the `prendus-icon-button` class.
+To create an icon button, add the `prendus-icon-button` class to one of the following:
+
+- a `<paper-icon-button>` element
+- an `<iron-icon>` element nested inside an `<a>` element
 
 ### How to use
 
