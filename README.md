@@ -102,12 +102,17 @@ background-color: var(--prendus-primary-color);
 
 ### Color Variables
 
-- **Prendus Primary Color (`--prendus-primary-color`)**: For logos, headers, and primary actions buttons.  Use to make clear the primary identity of Prendus.
-- **Prendus Primary Color Emphasis (`--prendus-primary-color-emphasis`)**: For accents and places where a color change on hover is needed (such as on buttons).
-- **Prendus Primary Color Light (`--prendus-primary-color-light`)**: For light backgrounds that could use a touch of color (such as tabs).
-- **Prendus Off White (`--prendus-off-white`)**: For backgrounds that should light, but not plain white (such as cards, menus, highlights, etc.).
-- **Prendus Grey (`--prendus-grey`)**: For outlines, dividers, and secondary buttons.
-- **Prendus Red (`--prendus-red`)**: For drawing attention, announcing critical errors, and warning about destructive actions.
+| Color Name | Color Code | Description |
+| :-- | :-- | :-- |
+| Prendus Primary Color | `--prendus-primary-color` | For logos, headers, and primary actions buttons.  Use to make clear the primary identity of Prendus. |
+| Prendus Primary Color Emphasis | `--prendus-primary-color-emphasis` | For accents and places where a color change on hover is needed (such as on buttons). |
+| Prendus Primary Color Light | `--prendus-primary-color-light` | For light backgrounds that could use a touch of color (such as tabs). |
+| Prendus Off White | `--prendus-off-white` | For backgrounds that should be light, but not plain white (such as cards, menus, highlights, etc.). |
+| Prendus Grey | `--prendus-grey` | For outlines, dividers, and secondary buttons. |
+| Prendus Green | `--prendus-green` | For signaling that an action is okay or announcing success. |
+| Prendus Blue | `--prendus-blue` | For highlighting important information or quotes. |
+| Prendus Yellow | `--prendus-yellow` | For warning the user about potential problems. |
+| Prendus Red | `--prendus-red` | For announcing critical errors, and warning about destructive actions (see  `prendus-button--destructive`). |
 
 ## Buttons
 
